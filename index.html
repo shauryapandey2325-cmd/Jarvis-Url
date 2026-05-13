@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<meta http-equiv="refresh" content="4;url=https://percentage-valentine-populations-processed.trycloudflare.com">
+<title>J.A.R.V.I.S — Remote Access</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: #000912;
+    color: #88EEFF;
+    font-family: 'Courier New', monospace;
+    min-height: 100vh;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    overflow: hidden;
+  }
+  body::before {
+    content: '';
+    position: fixed; inset: 0;
+    background-image:
+      repeating-linear-gradient(60deg, transparent, transparent 29px, rgba(0,60,90,0.18) 29px, rgba(0,60,90,0.18) 30px),
+      repeating-linear-gradient(-60deg, transparent, transparent 29px, rgba(0,60,90,0.18) 29px, rgba(0,60,90,0.18) 30px);
+    pointer-events: none; z-index: 0;
+  }
+  .card {
+    position: relative; z-index: 1;
+    background: rgba(1,12,24,0.95);
+    border: 1px solid #155878;
+    border-radius: 14px;
+    padding: 44px 40px;
+    width: min(420px, 92vw);
+    text-align: center;
+    box-shadow: 0 0 50px rgba(0,170,255,0.1);
+  }
+  .reactor { width: 72px; height: 72px; margin: 0 auto 22px; position: relative; }
+  .reactor-core {
+    position: absolute; inset: 24px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(0,170,255,0.9) 0%, rgba(0,170,255,0.2) 60%, transparent 100%);
+    animation: pulse 2s ease-in-out infinite;
+  }
+  .reactor-ring { position: absolute; border-radius: 50%; border: 1.5px dashed transparent; }
+  .reactor-ring:nth-child(1) { inset: 0; border-color: rgba(0,170,255,0.6) transparent transparent transparent; animation: spin 3s linear infinite; }
+  .reactor-ring:nth-child(2) { inset: 9px; border-color: rgba(255,119,0,0.7) transparent transparent rgba(255,119,0,0.3); animation: spin 2s linear infinite reverse; }
+  .reactor-ring:nth-child(3) { inset: 18px; border-color: rgba(255,184,0,0.8) transparent transparent transparent; animation: spin 1.2s linear infinite; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  @keyframes pulse { 0%,100% { opacity:.7; transform:scale(1); } 50% { opacity:1; transform:scale(1.2); } }
+  .title { font-size: 22px; font-weight: bold; color: #00AAFF; letter-spacing: 6px; margin-bottom: 4px; }
+  .sub { font-size: 9px; color: #FF7700; letter-spacing: 3px; margin-bottom: 24px; }
+  .status { font-size: 10px; color: #1E5068; letter-spacing: 2px; margin-bottom: 18px; }
+  .status span { color: #00FF88; }
+  .btn {
+    display: block; width: 100%;
+    background: transparent;
+    border: 1px solid #00AAFF;
+    border-radius: 8px;
+    color: #00AAFF;
+    font-family: 'Courier New', monospace;
+    font-size: 14px; font-weight: bold; letter-spacing: 3px;
+    padding: 16px; cursor: pointer;
+    text-decoration: none;
+    transition: all 0.2s;
+    margin-bottom: 14px;
+  }
+  .btn:hover { background: rgba(0,170,255,0.1); box-shadow: 0 0 20px rgba(0,170,255,0.25); }
+  .url-box {
+    background: #000d18; border: 1px solid #0a2840;
+    border-radius: 6px; padding: 10px 14px;
+    font-size: 11px; color: #1E5068;
+    word-break: break-all; margin-bottom: 18px;
+    letter-spacing: 1px;
+  }
+  .footer { font-size: 8px; color: #0a2840; letter-spacing: 2px; }
+  .countdown { font-size: 9px; color: #FF7700; letter-spacing: 2px; margin-top: 12px; }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="reactor">
+    <div class="reactor-ring"></div>
+    <div class="reactor-ring"></div>
+    <div class="reactor-ring"></div>
+    <div class="reactor-core"></div>
+  </div>
+  <div class="title">J.A.R.V.I.S</div>
+  <div class="sub">STARK INDUSTRIES &nbsp;&#9642;&nbsp; REMOTE ACCESS</div>
+  <div class="status">STATUS &nbsp;&#9642;&nbsp; <span>ONLINE</span></div>
+  <div class="url-box">https://percentage-valentine-populations-processed.trycloudflare.com</div>
+  <a class="btn" href="https://percentage-valentine-populations-processed.trycloudflare.com">&#9654;&nbsp; CONNECT TO JARVIS</a>
+  <div class="footer">LAST UPDATED &nbsp;&#9642;&nbsp; May 12, 2026 — 09:26 PM</div>
+  <div class="countdown">Redirecting automatically in 4 seconds...</div>
+</div>
+<script>
+  let s = 4;
+  const el = document.querySelector('.countdown');
+  const t = setInterval(() => {
+    s--;
+    if (s <= 0) { clearInterval(t); el.textContent = 'Redirecting now...'; }
+    else { el.textContent = 'Redirecting automatically in ' + s + ' second' + (s===1?'':'s') + '...'; }
+  }, 1000);
+</script>
+</body>
+</html>
